@@ -5,11 +5,11 @@ int vetor[100];
 int i = 0;
 int menu = 0;
 int SOMA = 0;
-int Epar = 0;
 int SOMAPAR = 0;
 int SOMAIMPAR = 0;
 
 void mostra(){
+  Serial.println();
   Serial.println("Função mostra VALOR POT:");
   for (int num = 0; num < i; num++) {
       Serial.print(String(vetor[num]) + "-");   
@@ -17,7 +17,7 @@ void mostra(){
   }         
   Serial.println();
   Serial.println("A soma total é de: " + String(SOMA));
-  delay(2000);  
+  delay(250);  
 }
 
 void leitura(){
@@ -28,6 +28,7 @@ void leitura(){
 }
 
 void mostrapar(){
+  Serial.println();
   Serial.println("Função mostra PAR:");
   for (int FORPAR = 0; FORPAR < i; FORPAR++) {
     if (vetor[FORPAR] % 2 == 0){
@@ -41,6 +42,7 @@ void mostrapar(){
 }
 
 void mostraimpar(){
+  Serial.println();
   Serial.println("Função mostra IMPAR:");
   for (int FORIMPAR = 0; FORIMPAR < i; FORIMPAR++) {
     if (vetor[FORIMPAR] % 2 != 0){
