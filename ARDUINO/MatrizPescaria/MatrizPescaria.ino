@@ -50,14 +50,13 @@ void pesca() {
     if ((peso >= peixe[i][0]) && (peso <= peixe[i][1])) {
       peixe[i][3] = peixe[i][3] + 1; //soma quantidade
       peixe[i][5] = peixe[i][5] + peso; //soma peso
-    }
-    if ((peixe[i][5] > peixe[i][4]) || (peixe[i][3] > peixe[i][3])){
-      
-      peixe[i][7] +1; // verificar quantidade de vezes que cesto encheu
+    
+    if ((peixe[i][5] > peixe[i][4]) || (peixe[i][3] > peixe[i][2])) {
+        peixe[i][6]++; // incrementa contador de vezes que encheu
+        Serial.println("⚠️ Cesto do tipo " + String(i) + " encheu!");
+      }
     }
   }
-
-
 }
 
 void loop() {
