@@ -12,7 +12,7 @@ int matrizRGB[6][4] = { // red | green | blue | contador
 
 void LeituraPotenciometro() {
   Serial.println("##### LEITURA DO POTENCIOMETRO #####");
-  int linha = map(analogRead(A0), 0, 1023, 1, 6);
+  int linha = map(analogRead(A0), 0, 1023, 1, 5);
 
   if (linha == 1){
     Serial.println("##### COR VERMELHA NO LED! #####");
