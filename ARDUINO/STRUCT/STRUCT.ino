@@ -44,8 +44,7 @@ void liga_led(int linha){
         analogWrite(pinos[2], rgb_array[x].b);
         rgb_array[linha].cont++;
       }
-    }
-  
+    }  
 }
 
 void LeituraPotenciometro() {
@@ -81,8 +80,8 @@ void setup() {
   rgb_array[2].cont = 0;
   rgb_array[2].cor = "Azul";
 
-  rgb_array[3].r = 255;
-  rgb_array[3].g = 255;
+  rgb_array[3].r = 180;
+  rgb_array[3].g = 210;
   rgb_array[3].b = 0;
   rgb_array[3].cont = 0;
   rgb_array[3].cor = "Amarelo";
@@ -99,11 +98,10 @@ void setup() {
   rgb_array[5].cont = 0;
   rgb_array[5].cor = "Ciano";
 
-  rgb_array[6].r = 139;
-  rgb_array[6].g = 69;
-  rgb_array[6].b = 19;
-  rgb_array[6].cont = 0;
-  rgb_array[6].cor = "Marrom";
+  rgb_array[6].r = 138;
+  rgb_array[6].g = 43;
+  rgb_array[6].b = 226;
+  rgb_array[6].cor = "Roxo Suave";
 
   rgb_array[7].r = 255;
   rgb_array[7].g = 165;
@@ -112,17 +110,15 @@ void setup() {
   rgb_array[7].cor = "Laranja";
 
   rgb_array[8].r = 170;
-  rgb_array[8].g = 170;
-  rgb_array[8].b = 170;
+  rgb_array[8].g = 215;
+  rgb_array[8].b = 255;
   rgb_array[8].cont = 0;
   rgb_array[8].cor = "Branco";
 
-  rgb_array[9].r = 255;
-  rgb_array[9].g = 165;
-  rgb_array[9].b = 0;
-  rgb_array[9].cont = 0;
-  rgb_array[9].cor = "Laranja";
-
+  rgb_array[9].r = 139;
+  rgb_array[9].g = 143;
+  rgb_array[9].b = 87;
+  rgb_array[9].cor = "Bronze";
 
 for (int i = 0; i < 3; i++) { // só 3 pinos
     pinMode(pinos[i], OUTPUT);
@@ -131,7 +127,6 @@ for (int i = 0; i < 3; i++) { // só 3 pinos
   pinMode(pushMostraMatriz, INPUT);
   Serial.begin(9600);
 }
-
 
 void loop() { // CHAMADOR DE FUNÇÕES
   if (digitalRead(PushButtom1) == HIGH) {
