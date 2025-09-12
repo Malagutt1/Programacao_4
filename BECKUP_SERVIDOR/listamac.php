@@ -1,45 +1,47 @@
-Array
-(
-    [idmac] => 48:E7:29:55:38:89
-    [0] => 48:E7:29:55:38:89
-    [nome] => ESP Vermelho
-    [1] => ESP Vermelho
-    [contador] => 8
-    [2] => 8
-)
-Array
-(
-    [idmac] => 84:0D:8E:B0:82:5C
-    [0] => 84:0D:8E:B0:82:5C
-    [nome] => ESP Azul
-    [1] => ESP Azul
-    [contador] => 0
-    [2] => 0
-)
-Array
-(
-    [idmac] => 94:B9:7E:15:FB:FD
-    [0] => 94:B9:7E:15:FB:FD
-    [nome] => Esp8266 BancoWeb
-    [1] => Esp8266 BancoWeb
-    [contador] => 0
-    [2] => 0
-)
-Array
-(
-    [idmac] => CC:50:E3:05:19:BA
-    [0] => CC:50:E3:05:19:BA
-    [nome] => ESP Branco
-    [1] => ESP Branco
-    [contador] => 12
-    [2] => 12
-)
-Array
-(
-    [idmac] => CC:50:E3:3C:1E:52
-    [0] => CC:50:E3:3C:1E:52
-    [nome] => ESP Verde
-    [1] => ESP Verde
-    [contador] => 9
-    [2] => 9
-)
+<?php
+$username = 'miguelde_modulo4';
+$password = 'modulo4';
+$dbname = 'miguelde_modulo4';
+$host = 'localhost';
+
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    echo '<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de MACs</title>
+    </head>
+    <body>
+    <main>
+        <table border="1">
+            <tr>
+                <th>ID MAC</th>
+                <th>Nome</th>
+                <th>Contador</th>
+                <th>Ativo</th>
+            </tr>';
+
+    $sql = 'SELECT mac.idmac as "IDMAC", mac.nome as "NOME", mac.contador as "CONTADOR", mac.ativo as "ATIVO" FROM mac';
+    $data = $conn->query($sql);
+
+    foreach ($data as $row) {
+        echo '<tr>';
+        echo '<td>' . htmlspecialchars($row['IDMAC']) . '</td>';
+        echo '<td>' . htmlspecialchars($row['NOME']) . '</td>';
+        echo '<td>' . htmlspecialchars($row['CONTADOR']) . '</td>';
+        echo '<td>' . htmlspecialchars($row['ATIVO']) . '</td>';
+        echo '</tr>';
+    }
+
+    echo '</table>
+    </main>
+    </body>
+    </html>';
+
+} catch (PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
+}
+?>
