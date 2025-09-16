@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+#4A90E2 – Azul suave
+#FF6B6B – Coral quente
+#F5A623 – Laranja queimado
+*/
+
+h2 {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #FF6B6B;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Exo 2", sans-serif; 
+  color: #4A90E2;
+  text-align: center;
+}
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 0 auto 20px auto; 
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px #F5A623;
+  border-radius: 8px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box:nth-child(3) {
+  background-color: #FF5722;
+}
+
+.box:nth-child(2) {
+  background-color: #2196F3;
+}
