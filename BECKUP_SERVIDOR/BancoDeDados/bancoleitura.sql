@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Set-2025 às 20:15
+-- Tempo de geração: 19-Set-2025 às 20:59
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.0.25
 
@@ -105,10 +105,10 @@ CREATE TABLE `mackaua` (
 
 INSERT INTO `mackaua` (`idmackaua`, `nome`, `contador`, `ativo`) VALUES
 ('CC:50:E3:05:19:BA', 'PLACA DIA 09/09', 2, 1),
-('CC:50:E3:05:19:BB', 'PLACA DIA 09/09 Teste 2', 5, 1),
+('CC:50:E3:05:19:BB', 'PLACA DIA 09/09 Teste 2', 0, 1),
 ('CC:50:E3:05:19:BC', 'PLACA TESTE 01', 0, 0),
-('CC:50:E3:05:19:BD', 'PLACA BACKUP', 1, 1),
-('CC:50:E3:05:19:BE', 'PLACA INATIVA', 12, 0),
+('CC:50:E3:05:19:BD', 'PLACA BACKUP', 0, 1),
+('CC:50:E3:05:19:BE', 'PLACA INATIVA', 0, 0);
 
 --
 -- Índices para tabelas despejadas

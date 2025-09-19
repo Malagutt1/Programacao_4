@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Leitura</title>
+    <link rel="stylesheet" href="https://www.modulo4.migueldebarba.com.br/kaua/style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container"> <!-- FORMULARIO HTML ATRÁVES DO MÉTODO POST -->
+        <form action="insertleitura.php" method="post">
+            <input type="text" name="idmac" placeholder="Endereço MAC">
+            <input type="date" name="dataleitura" placeholder="Data de leitura"> <br>
+            <input type="time" name="horaleitura" placeholder="Hora de leitura">
+            <input type="text" name="umidade" placeholder="Umidade %"> <br>
+            <input type="text" name="temperatura" placeholder=".cº"> <br>
+            <input type="submit" placeholder="Enviar">
+        </form>
+    </div>
+</body>
+
+</html>
