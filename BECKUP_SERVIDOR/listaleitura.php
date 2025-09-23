@@ -27,18 +27,20 @@ try {
     <table border="1">
         <tr>
             <th>IDLEITURA</th>
+            <th>DATA</th>
             <th>HORA</th>
             <th>UMIDADE</th>
             <th>TEMPERATURA</th>
             <th>UMIDADE</th>
         </tr> 
         <?php
-    $sql = 'SELECT leiturakaua.idleiturakaua as "IDLEITURA", leiturakaua.horaleitura as "HORA", leiturakaua.umidade as "UMIDADE", leiturakaua.temperatura as "TEMPERATURA" FROM leiturakaua';
+    $sql = 'SELECT leiturakaua.idleiturakaua as "IDLEITURA", leiturakaua.dataleitura as "DATA", leiturakaua.horaleitura as "HORA", leiturakaua.umidade as "UMIDADE", leiturakaua.temperatura as "TEMPERATURA" FROM leiturakaua';
     $data = $conn->query($sql);
 
     foreach ($data as $row) {
         echo '<tr>';
         echo '<td>' . htmlspecialchars($row['IDLEITURA']) . '</td>';
+        echo '<td>' . htmlspecialchars($row['DATA']) . '</td>';
         echo '<td>' . htmlspecialchars($row['HORA']) . '</td>';
         echo '<td>' . htmlspecialchars($row['UMIDADE']) . '</td>';
         echo '<td>' . htmlspecialchars($row['TEMPERATURA']) . '</td>';

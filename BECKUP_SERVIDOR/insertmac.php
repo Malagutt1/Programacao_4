@@ -12,16 +12,18 @@ try {
   echo 'Connection error: ' . $error->getMessage(); // Mensagem de erro se falhar
 }
 
-// Recebe os dados do formulario
-$idmac = $_POST['idmac'];
-$nome   = $_POST['nome'];
+
 
 // Insere os dados na lista "mac"
-$my_Insert_Statement = $my_Db_Connection->prepare("INSERT INTO mac (idmac, nome) VALUES (:idmac, :nome)");
+// Recebe os dados do formulário via POST
+$idmackaua = $_POST['idmackaua'];
+$nome = $_POST['nome'];
 
-// recebe os dados para a variavel
-$my_Insert_Statement->bindParam(':idmac', $idmac);
+// Prepara o comando para inserir na tabela 'mackaua'
+$my_Insert_Statement = $my_Db_Connection->prepare("INSERT INTO mackaua (idmackaua, nome) VALUES (:idmackaua, :nome)");
+$my_Insert_Statement->bindParam(':idmackaua', $idmackaua);
 $my_Insert_Statement->bindParam(':nome', $nome);
+
 
 if ($my_Insert_Statement->execute()) {
   print "Placa inserida com sucesso"; // Mensagem se inserção for bem-sucedida

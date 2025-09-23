@@ -5,6 +5,7 @@
 #4A90E2 – Azul suave
 #FF6B6B – Coral quente
 #F5A623 – Laranja queimado
+#2ECC40 - Verde menta
 */
 
 h2 {
@@ -44,7 +45,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-  background-color: #ddd;
+  background-color: #2ECC40;
 }
 
 .container {
