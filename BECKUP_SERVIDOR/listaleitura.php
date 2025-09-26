@@ -29,7 +29,6 @@ try {
             <th>IDLEITURA</th>
             <th>DATA</th>
             <th>HORA</th>
-            <th>UMIDADE</th>
             <th>TEMPERATURA</th>
             <th>UMIDADE</th>
         </tr> 
@@ -41,8 +40,7 @@ try {
         echo '<tr>';
         echo '<td>' . htmlspecialchars($row['IDLEITURA']) . '</td>';
         echo '<td>' . htmlspecialchars($row['DATA']) . '</td>';
-        echo '<td>' . htmlspecialchars($row['HORA']) . '</td>';
-        echo '<td>' . htmlspecialchars($row['UMIDADE']) . '</td>';
+        echo '<td>' . htmlspecialchars($row['HORA']) . '</td>';        
         echo '<td>' . htmlspecialchars($row['TEMPERATURA']) . '</td>';
         echo '<td>' . htmlspecialchars($row['UMIDADE']) . '</td>';
         echo '</tr>';
