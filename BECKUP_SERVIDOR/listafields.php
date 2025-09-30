@@ -6,7 +6,7 @@ $charset = 'utf8mb4';
 try {
 
     // Nome da tabela que você quer inspecionar
-    $tabela = 'mackaua';
+    $tabela = 'leiturakaua';
 
     // Executa a consulta para obter informações das colunas
     $stmt = $conn->query("DESCRIBE `$tabela`");
