@@ -67,7 +67,4 @@ void loop() {
     delay(1000);
     digitalWrite(D3, LOW);
   }
-
-
-  delay(random(10000, 45000));
 }

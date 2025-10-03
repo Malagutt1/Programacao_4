@@ -77,3 +77,35 @@ tr:hover {
 .box:nth-child(2) {
   background-color: #2196F3;
 }
+
+button {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  margin: 2px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Botão ativar */
+button[name="acao"][value="ativar"] {
+  background-color: #2ECC40; /* Verde menta */
+  color: #fff;
+}
+
+button[name="acao"][value="ativar"]:hover {
+  background-color: #27ae38;
+}
+
+/* Botão desativar */
+button[name="acao"][value="desativar"] {
+  background-color: #FF6B6B; /* Coral quente */
+  color: #fff;
+}
+
+button[name="acao"][value="desativar"]:hover {
+  background-color: #e74c3c;
+}

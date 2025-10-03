@@ -50,16 +50,12 @@ $placas = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <tr>
                 <th>MAC</th>
                 <th>Nome</th>
-                <th>Status</th>
                 <th>Ação</th>
             </tr>
             <?php foreach ($placas as $placa): ?>
             <tr>
                 <td><?= htmlspecialchars($placa['idmackaua']) ?></td>
                 <td><?= htmlspecialchars($placa['nome']) ?></td>
-                <td>
-                    <?= $placa['ativo'] ? 'Ativo' : 'Inativo' ?>
-                </td>
                 <td>
                     <form method="post" style="display:inline;">
                         <input type="hidden" name="mac" value="<?= htmlspecialchars($placa['idmackaua']) ?>">
