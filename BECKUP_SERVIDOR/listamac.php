@@ -44,6 +44,9 @@
             }
             ?>
         </table>
+        <div class="voltar">
+            <a href="index.php" class="back-link">Voltar à página inicial</a>
+        </div>
     </div>
 </main>
 </body>

@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.modulo4.migueldebarba.com.br/kaua/style.css" type="text/css" />
     <title>Insert Mac</title>
 </head>
+<body class="insertmac-page">
 
-<body>
-    <header> <!-- Começo HEADER -->
-        <h3>Inserir placas MAC</h3>
-    </header><!-- Final HEADER -->
+<main>
+    <h2>Inserir placas MAC</h2>
+    <h3>Cadastre placas no Banco!</h3>
 
-    <main> <!-- Começo MAIN -->
-        <form action="insertmac.php" method="post"> <!-- Formulario -->
-            <label><input type="text" name="idmackaua" placeholder="Insira o MAC da plaquinha"></label> <br>
-            <label><input type="text" name="nome" placeholder="Digite o nome da plaquinha"></label> <br>
-            <label><input type="submit" name="enviar" value="Enviar"> </label> <br>
-        </form>
-    </main> <!-- Final MAIN -->
-    
+    <form action="insertmac.php" method="post">
+        <div class="form-group">
+            <input type="text" name="idmackaua" placeholder="Insira o MAC da plaquinha">
+            <input type="text" name="nome" placeholder="Digite o nome da plaquinha">
+        </div>
+
+        <div class="btn-area">
+            <button type="submit">Enviar Leitura</button>
+        </div>
+    </form>
+
+    <div class="voltar">
+        <a href="index.php" class="back-link">Voltar à página inicial</a>
+    </div>
+</main>
+
 </body>
 </html>

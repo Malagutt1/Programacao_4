@@ -17,10 +17,14 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); ?>
 
 <body>
-<main>
+    <main>
+    
     <div class= 'container'>
         <h2>Página Kauã</h2>
         <h3>Leitura ESP8266</h2>
+        <div class="voltar">
+            <a href="index.php" class="back-link">Voltar à página inicial</a>
+        </div>
     </div>
 
     <div class = 'container'>

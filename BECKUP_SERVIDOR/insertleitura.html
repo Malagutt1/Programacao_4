@@ -5,21 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insert Leitura</title>
-    <link rel="stylesheet" href="https://www.modulo4.migueldebarba.com.br/kaua/style.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
-    <div class="container"> <!-- FORMULARIO HTML ATRÁVES DO MÉTODO POST -->
+    <div class="container">
+        <h2>Registro de Leitura</h2>
+        <h3>Insira os dados abaixo</h3>
+
         <form action="insertleitura.php" method="post">
-            <input type="text" name="idmac" placeholder="Endereço MAC">
-            <input type="date" name="dataleitura" placeholder="Data de leitura"> <br>
-            <input type="time" name="horaleitura" placeholder="Hora de leitura">
-            <input type="text" name="umidade" placeholder="Umidade %"> <br>
-            <input type="text" name="temperatura" placeholder=".cº"> <br>
-            <input type="hidden" name="from" value="html">
-            <input type="submit" placeholder="Enviar">
+            <div class="form-group">
+                <input type="text" name="idmac" placeholder="Endereço MAC" required>
+                <input type="date" name="dataleitura" placeholder="Data de leitura" required>
+            </div>
+
+            <div class="form-group">
+                <input type="time" name="horaleitura" placeholder="Hora de leitura" required>
+                <input type="text" name="umidade" placeholder="Umidade %" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="temperatura" placeholder="Temperatura °C" required>
+                <input type="hidden" name="from" value="html">
+            </div>
+
+            <div class="btn-area">
+                <button type="submit">Enviar Leitura</button>
+            </div>
         </form>
+
+
+        <div class="voltar">
+            <a href="index.php" class="back-link">Voltar à página inicial</a>
+        </div>
     </div>
+
 </body>
 
 </html>

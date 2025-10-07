@@ -69,6 +69,9 @@ $placas = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </tr>
             <?php endforeach; ?>
         </table>
+        <div class="voltar">
+            <a href="index.php" class="back-link">Voltar à página inicial</a>
+        </div>
     </div>
 </body>
 </html>

@@ -1,43 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*
+/* Paleta de cores
 #4A90E2 – Azul suave
 #FF6B6B – Coral quente
 #F5A623 – Laranja queimado
-#2ECC40 - Verde menta
+#2ECC40 – Verde menta
 */
+
+/* ===== BASE GLOBAL ===== */
+body {
+  font-family: "Exo 2", sans-serif;
+  background: linear-gradient(135deg, #4A90E2, #F5A623);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: #000;
+}
+
+h2, h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
 h2 {
   font-family: "Rajdhani", sans-serif;
   font-weight: 700;
   font-size: 40px;
   color: #FF6B6B;
-  text-align: center;
+  margin-bottom: 10px;
 }
 
 h3 {
-  font-family: "Exo 2", sans-serif; 
+  font-family: "Exo 2", sans-serif;
+  font-size: 25px;
   color: #4A90E2;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* ===== BOTÃO FORMULÁRIO CORRIGIDO ===== */
+.btn-area {
   text-align: center;
+  margin-top: 15px;
 }
 
+.btn-area button {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #2ECC40; /* Verde menta */
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: inline-block;
+}
+
+.btn-area button:hover {
+  background-color: #FF6B6B; /* Coral quente */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(245, 166, 35, 0.6);
+  border-radius: 10px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===== TABELAS ===== */
 table {
-  width: 70%;
+  width: 100%;
   border-collapse: collapse;
-  margin: 0 auto 20px auto; 
+  margin: 20px 0;
 }
 
-th,
-td {
+th, td {
   border: 1px solid #ddd;
-  padding: 6px;
+  padding: 8px;
   text-align: center;
 }
 
 th {
   background-color: #FF6B6B;
-  
+  color: #fff;
 }
 
 tr:nth-child(even) {
@@ -46,53 +105,77 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #2ECC40;
+  color: #fff;
 }
 
-.container {
-  max-width: 600px;
-  margin: 50px auto;
-  background-color: #fff;
-  padding: 30px;
-  box-shadow: 0 0 10px #F5A623;
+/* ===== CARDS ===== */
+.card {
+  background-color: #4A90E2;
+  color: #fff;
   border-radius: 8px;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  max-width: 500px;
+  margin: 0 auto 20px auto;
+  overflow: hidden;
 }
 
-.box {
-  width: 200px;
-  height: 200px;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.box:nth-child(3) {
-  background-color: #FF5722;
-}
-
-.box:nth-child(2) {
-  background-color: #2196F3;
-}
-
-button {
-  font-family: "Rajdhani", sans-serif;
-  font-size: 14px;
+.card-header {
+  background-color: #FF6B6B;
+  color: #fff;
+  padding: 1.5rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  padding: 8px 16px;
-  margin: 2px;
-  border: none;
+  text-align: center;
+  border-bottom: none;
+}
+
+.card-body {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ===== LISTAS ===== */
+.list-group-item {
+  background-color: #F5A623;
+  color: #000;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.list-group-item:hover {
+  background-color: #FF6B6B;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.list-group-item a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+}
+
+.list-group-item i {
+  margin-right: 10px;
+}
+
+/* ===== BOTÕES ===== */
+button, input[type="submit"] {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
   border-radius: 6px;
+  border: none;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
-/* Botão ativar */
-button[name="acao"][value="ativar"] {
-  background-color: #2ECC40; /* Verde menta */
+button[name="acao"][value="ativar"], 
+input[name="acao"][value="ativar"] {
+  background-color: #2ECC40;
   color: #fff;
 }
 
@@ -100,12 +183,160 @@ button[name="acao"][value="ativar"]:hover {
   background-color: #27ae38;
 }
 
-/* Botão desativar */
-button[name="acao"][value="desativar"] {
-  background-color: #FF6B6B; /* Coral quente */
+button[name="acao"][value="desativar"], 
+input[name="acao"][value="desativar"] {
+  background-color: #FF6B6B;
   color: #fff;
 }
 
 button[name="acao"][value="desativar"]:hover {
   background-color: #e74c3c;
+}
+
+/* Botão voltar */
+.voltar {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-link {
+  display: inline-block;
+  max-width: 400px;
+  width: auto;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #4A90E2;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.25s ease;
+  text-align: center;
+}
+
+.back-link:hover {
+  background-color: #FF6B6B;
+  transform: scale(1.02);
+  box-shadow: 0 0 6px rgba(255,107,107,0.3);
+}
+
+/* ===== ESTILO ESPECÍFICO: PÁGINA INSERT MAC ===== */
+
+.insertmac-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4A90E2, #F5A623);
+}
+
+.insertmac-page header h3 {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 28px;
+  color: #FF6B6B;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.insertmac-page main {
+  background-color: #fff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.insertmac-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.insertmac-page input[type="text"] {
+  padding: 10px 12px;
+  border: 2px solid #4A90E2;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.insertmac-page input[type="text"]:focus {
+  border-color: #FF6B6B;
+  outline: none;
+  box-shadow: 0 0 6px rgba(255, 107, 107, 0.5);
+}
+
+.insertmac-page input[type="submit"] {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #2ECC40;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.insertmac-page input[type="submit"]:hover {
+  background-color: #FF6B6B;
+  transform: scale(1.05);
+}
+
+
+/* ===== FORMULÁRIOS ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  flex: 1 1 45%;
+  padding: 10px 12px;
+  border: 2px solid #4A90E2;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #FF6B6B;
+  outline: none;
+  box-shadow: 0 0 6px rgba(255,107,107,0.5);
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 20px;
+  }
 }
